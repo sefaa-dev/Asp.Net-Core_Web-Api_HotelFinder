@@ -7,7 +7,7 @@ namespace HotelFinder.Entities
     public class Hotel
     {
 
-        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
         public int Id { get; set; }
 
         [StringLength(50)]
