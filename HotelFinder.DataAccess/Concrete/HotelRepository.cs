@@ -48,7 +48,11 @@ namespace HotelFinder.DataAccess.Concrete
 
         public Hotel UpdateHotel(Hotel hotel)
         {
-            throw new NotImplementedException();
+            using (var hotelDbContext = new HotelDbContext())
+            {
+                hotelDbContext.Hotels.Update(hotel);
+                return hotel;
+            }
         }
     }
 }
